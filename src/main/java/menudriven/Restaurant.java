@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 public class Restaurant {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "res_id_gen")
 	@SequenceGenerator(name = "res_id_gen", initialValue = 101, allocationSize = 1)
 	private int id;
 	private String name;
